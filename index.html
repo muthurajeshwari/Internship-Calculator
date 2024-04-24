@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h1 class="tit">Calculator</h1>
+<div class="con">
+    <div class="res">
+        <input class="input" id="result" type="text" id="result">
+    </div>
+    <div class="grid">
+        
+    <div class="item"><button onclick="add('1')">1</button></div>
+    <div class="item"><button onclick="add('2')">2</button></div>
+    <div class="item"><button onclick="add('3')">3</button></div>  
+    <div class="item"><button onclick="add('+')">+</button></div>  
+    <div class="item"><button onclick="add('4')">4</button></div>
+    <div class="item"><button onclick="add('5')">5</button></div>
+    <div class="item"><button onclick="add('6')">6</button></div>  
+    <div class="item"><button onclick="add('-')">-</button></div>  
+    <div class="item"><button onclick="add('7')">7</button></div>
+    <div class="item"><button onclick="add('8')">8</button></div>
+    <div class="item"><button onclick="add('9')">9</button></div>  
+    <div class="item"><button onclick="add('*')">*</button></div>  
+    <div class="item"><button onclick="add('.')">.</button></div>  
+    <div class="item"><button onclick="add('0')">0</button></div>  
+    <div class="item"><button onclick="add('/')">/</button></div>  
+    <div class="item"><button onclick="answer()">=</button></div>  
+    <div class="item"><button onclick="clearResult()">C</button></div>  
+    </div>
+</div>
+
+<script>
+    function add(value)
+    {
+        document.getElementById('result').value+=value;
+    }
+    function clearResult(){
+        document.getElementById("result").value = "";
+    }
+
+    function answer(){
+        var result = document.getElementById("result").value;
+        document.getElementById("result").value = eval(result);
+
+    }
+   
+</script>
+</body>
+</html>
